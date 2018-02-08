@@ -9,6 +9,6 @@ import time
 
 IG = requests.get('https://api.bilibili.com/x/web-interface/index/icon') # 定义访问链接(IconGet)
 io = StringIO(IG.text)  # 提取文本，并转换为json格式
-print('标题|',json.load(io)["data"]["title"],) # 提取标题
-io = StringIO(IG.text)  # 提取文本，并转换为json格式(此处不知为何需要再次提取。)
-print('图片Url|',json.load(io)["data"]["icon"]) # 提取图片Url
+print('标题 | ',json.load(io)["data"]["title"],) # 提取标题
+io = StringIO(IG.text)  # 提取文本，并转换为json格式
+print('图片Url | ',json.load(io)["data"]["icon"]) # 提取图片Url
